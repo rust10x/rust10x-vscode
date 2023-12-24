@@ -1,10 +1,10 @@
 {
   "name": "rust10x",
-  "publisher": "rust10x",
+  "publisher": "Rust10x",
   "license": "MIT",
-  "displayName": "rust10x",
+  "displayName": "Rust10x",
   "description": "Rust coding snippets and more. https://rust10x.com/vscode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.85.0"
   },

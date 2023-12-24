@@ -6,6 +6,7 @@
 !.vscodeignore
 *.vsix
 
+
 # -- Rust
 target/
 Cargo.lock
@@ -34,6 +35,8 @@ out/
 *.jpeg
 *.jpg
 *.png
+
+!icon.png
 
 # -- other
 .DS_Store
