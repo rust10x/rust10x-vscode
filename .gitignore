@@ -1,0 +1,59 @@
+# -- Base
+.*
+!.gitignore
+
+# -- VSCode extension
+!.vscodeignore
+*.vsix
+
+# -- Rust
+target/
+Cargo.lock
+!.cargo/
+
+# -- Safety net
+dist/
+out/
+
+# Data Files
+*.parquet
+*.map
+*.zip
+*.gz
+*.tar
+*.tgz
+
+# Videos
+*.mov
+*.mp4
+*.avi
+
+# Images
+*.icns
+*.ico
+*.jpeg
+*.jpg
+*.png
+
+# -- other
+.DS_Store
+_*
+# '_' in src dir, ok.
+!src/**/_*
+
+# Allows .env (for early developmment) 
+!.env
+
+# Allow vscode
+# !.vscode
+
+# -- Nodejs
+!.mocharc.yaml
+node_modules/
+npm-debug.log
+report.*.json
+package.lock
+
+# -- Python
+__pycache__/
+

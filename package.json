@@ -1,0 +1,26 @@
+{
+  "name": "rust10x",
+  "publisher": "rust10x",
+  "license": "MIT",
+  "displayName": "rust10x",
+  "description": "Rust coding snippets and more. https://rust10x.com/vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rust10x/rust10x-vscode"
+  },  
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "rust",
+        "path": "./snippets/rust10x.code-snippets"
+      }
+    ]
+  }
+}
