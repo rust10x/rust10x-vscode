@@ -7,7 +7,7 @@
 			"${2}$TM_SELECTED_TEXT",
 			"// endregion: --- ${1:Section}"
 		],
-		"description": "Comment Section (rust10x.com/vscode)"
+		"description": "Comment Section"
 	},
 
   // -- Error Snippets
@@ -31,7 +31,7 @@
 			"impl std::error::Error for Error {}",
 			"// endregion: --- Error Boilerplate"
 		],
-		"description": "Error boilerplate (rust10x.com/vscode)"
+		"description": "Error boilerplate"
 	},
 
 	"10x-early-dyn-err": {
@@ -39,10 +39,69 @@
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Error>;",
 			"",
-			"pub type Error = Box<dyn std::error::Error>;",
+			"pub type Error = Box<dyn std::error::Error>; // for early dev",
 		],
 		"description": "Early dev error aliases"
 	},
+
+	// -- Impl Snippets
+	"10x-impl-from": {
+		"prefix": "10x-impl-from",
+		"body": [
+			"impl From<${1:from_type}> for ${2:to_type} {",
+			"\tfn from(val: ${1}) -> Self {",
+			"\t\t$3",
+			"\t}",
+			"}"
+		],
+		"description": "impl From implementation"
+	},	
+
+	"10x-impl-try-from": {
+		"prefix": "10x-impl-try-from",
+		"body": [
+			"impl TryFrom<${1:FromType}> for ${2:ToType} {",
+			"\ttype Error = ${3:Error};",
+			"\tfn try_from(val: ${1}) -> Result<${2}> {",
+			"\t\t$4",
+			"\t}",
+			"}\n"
+		],
+		"description": "impl TryFrom implementation (assume Result<T> in scope)"
+	},
+	
+	// -- Wrapper Snippets
+	"10x-wrap-option": {
+		"prefix": "10x-wrap-option",
+		"body": [
+			"Option<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Option<Selection>"
+	},
+
+	"10x-wrap-result": {
+		"prefix": "10x-wrap-result",
+		"body": [
+			"Result<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Result<Selection>"
+	},
+
+	"10x-wrap-vec": {
+		"prefix": "10x-wrap-vec",
+		"body": [
+			"Vec<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Vec<Selection>"
+	},
+
+	"10x-wrap-arc": {
+		"prefix": "10x-wrap-arc",
+		"body": [
+			"Arc<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Arc<Selection>"
+	},	
   
   // -- Test Snippets
 	"10x-test": {
@@ -52,7 +111,8 @@
 			"#[cfg(test)]",
 			"mod tests {",
 			"\tuse super::*;",
-			"\tuse anyhow::Result;",
+			"\ttype Error = Box<dyn std::error::Error>;",
+			"\ttype Result<T> = core::result::Result<T, Error>;",
 			"",
 			"\t$1",
 			"}",
