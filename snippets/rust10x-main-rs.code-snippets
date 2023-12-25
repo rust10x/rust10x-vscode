@@ -1,0 +1,42 @@
+{
+	"10x-main-rs": {
+		"prefix": "10x-main-rs-01",
+		"body": [
+			"// region:    --- Modules",
+			"",
+			"mod error;",
+			"",
+			"pub use error::{Error, Result};",
+			"",
+			"// endregion: --- Modules",
+			"",
+			"fn main() -> Result<()> {",
+			"\tprintln!(\"Hello, world!\");",
+			"",
+			"\tOk(())",
+			"}",
+			""
+		],
+	},
+
+	"10-main-rs-async": {
+		"prefix": "10x-main-rs-02-async",
+		"body": [
+			"// region:    --- Modules",
+			"",
+			"mod error;",
+			"",
+			"pub use error::{Error, Result};",
+			"",
+			"// endregion: --- Modules",
+			"",
+			"#[tokio::main]"
+			"async fn main() -> Result<()> {",
+			"\tprintln!(\"Hello, world!\");",
+			"",
+			"\tOk(())",
+			"}",
+			""
+		],
+	},	
+}

@@ -1,0 +1,103 @@
+{
+	"10x-error-rs": {
+		"prefix": "10x-error-rs-01",
+		"body": [
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"",
+			"#[derive(Debug)]",
+			"pub enum Error {",
+			"\t${1:// TBC}",
+			"}",
+			"",
+			"// region:    --- Error Boilerplate",
+			"",
+			"impl core::fmt::Display for Error {",
+			"\tfn fmt(&self, fmt: &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error> {",
+			"\t\twrite!(fmt, \"{self:?}\")",
+			"\t}",
+			"}",
+			"",
+			"impl std::error::Error for Error {}",
+			"",
+			"// endregion: --- Error Boilerplate"
+		],
+		"description": "Error boilerplate"
+	},
+
+	"10x-error-rs-with-from": {
+		"prefix": "10x-error-rs-02-with-from",
+		"body": [
+			"use derive_more::From;",
+			"",
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"",
+			"#[derive(Debug, From)]",
+			"pub enum Error {",
+			"\t${1:// TBC}",
+			"}",
+			"",
+			"// region:    --- Error Boilerplate",
+			"",
+			"impl core::fmt::Display for Error {",
+			"\tfn fmt(&self, fmt: &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error> {",
+			"\t\twrite!(fmt, \"{self:?}\")",
+			"\t}",
+			"}",
+			"",
+			"impl std::error::Error for Error {}",
+			"",
+			"// endregion: --- Error Boilerplate"
+		],
+		"description": "error.rs boostrap code with derive_more::From"
+	},
+
+	"10x-error-rs-with-custom": {
+		"prefix": "10x-error-rs-03-with-custom",
+		"body": [
+			"use derive_more::From;",
+			"",
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"",
+			"#[derive(Debug, From)]",
+			"pub enum Error {",
+			"\t#[from]",
+			"\tCustom(String),",
+			"",
+			"\t${1:// TBC}",
+			"}",
+			"",
+			"// region:    --- Froms",
+			"",
+			"impl From<&str> for Error {",
+			"\tfn from(val: &str) -> Self {",
+			"\t\tSelf::Custom(val.to_string())",
+			"\t}",
+			"}",
+			"",
+			"// endregion: --- Froms",
+			"",
+			"// region:    --- Error Boilerplate",
+			"",
+			"impl core::fmt::Display for Error {",
+			"\tfn fmt(&self, fmt: &mut core::fmt::Formatter) -> core::result::Result<(), core::fmt::Error> {",
+			"\t\twrite!(fmt, \"{self:?}\")",
+			"\t}",
+			"}",
+			"",
+			"impl std::error::Error for Error {}",
+			"",
+			"// endregion: --- Error Boilerplate"
+		],
+		"description": "error.rs boostrap code with derive_more::From"
+	},
+
+	"10x-error-rs-early-dev-box-dyn": {
+		"prefix": "10x-error-rs-04-early-dev-box-dyn", 
+		"body": [
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"",
+			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
+		],
+		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
+	},
+}

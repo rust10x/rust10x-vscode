@@ -1,0 +1,222 @@
+{
+  // -- Comment Snippets
+	"10x-comment-section": {
+		"prefix": "10x-comment-section",
+		"body": [
+			"// region:    --- ${1:Section}",
+			"${2}$TM_SELECTED_TEXT",
+			"// endregion: --- ${1:Section}"
+		],
+		"description": "Comment Section"
+	},
+
+	"10x-comment-delimiter": {
+		"prefix": "10x-comment-delimiter",
+		"body": [
+			"// -- ${1}",
+		],
+		"description": "Comment Delimiter"
+	},	
+
+  // -- Modules Snippets
+
+	"10x-modules-section": {
+		"prefix": "10x-modules-section-01",
+		"body": [
+			"// region:    --- Modules",
+			"${1}"
+			"use ${2:crate}::{${3}Result};"
+			"",
+			"// endregion: --- Modules"
+		],
+		"description": "Simple modules section (default `use crate::Error`)"
+	},
+
+	"10x-modules-with-error-section": {
+		"prefix": "10x-modules-section-02-with-error",
+		"body": [
+			"// region:    --- Modules",
+			"",
+			"mod error;",
+			"${1}",
+			"pub use error::{Error, Result};"
+			"",
+			"// endregion: --- Modules"
+		],
+		"description": "Modules sections with module error"
+	},		
+
+	// -- Impl Snippets
+	"10x-impl-from": {
+		"prefix": "10x-impl-from",
+		"body": [
+			"impl From<${1:from_type}> for ${2:to_type} {",
+			"\tfn from(val: ${1}) -> Self {",
+			"\t\t$3",
+			"\t}",
+			"}"
+		],
+		"description": "impl From implementation"
+	},	
+
+	"10x-impl-try-from": {
+		"prefix": "10x-impl-try-from",
+		"body": [
+			"impl TryFrom<${1:FromType}> for ${2:ToType} {",
+			"\ttype Error = ${3:Error};",
+			"\tfn try_from(val: ${1}) -> Result<${2}> {",
+			"\t\t$4",
+			"\t}",
+			"}\n"
+		],
+		"description": "impl TryFrom implementation (assume Result<T> in scope)"
+	},
+	
+	// -- Wrapper Snippets
+	"10x-wrap-option": {
+		"prefix": "10x-wrap-option",
+		"body": [
+			"Option<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Option<Selection>"
+	},
+
+	"10x-wrap-result": {
+		"prefix": "10x-wrap-result",
+		"body": [
+			"Result<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Result<Selection>"
+	},
+
+	"10x-wrap-vec": {
+		"prefix": "10x-wrap-vec",
+		"body": [
+			"Vec<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Vec<Selection>"
+	},
+
+	"10x-wrap-arc": {
+		"prefix": "10x-wrap-arc",
+		"body": [
+			"Arc<${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "Wrap Selection as Arc<Selection>"
+	},	
+  
+	// -- Functions
+
+	"10x-fn": {
+		"prefix": "10x-fn-01",
+		"body": [
+			"fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
+			"\t${4}",
+			"\t${5:todo!()}",
+			"}"
+		],
+	},	
+
+	"10x-pub-fn": {
+		"prefix": "10x-fn-02-pub-fn",
+		"body": [
+			"pub fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
+			"\t${4}",
+			"\t${5:todo!()}",
+			"}"
+		],
+	},		
+
+	"10x-async-fn": {
+		"prefix": "10x-fn-03-async-fn",
+		"body": [
+			"async fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
+			"\t${4}",
+			"\t${5:todo!()}",
+			"}"
+		],
+	},
+
+	"10x-pub-async-fn":{
+		"prefix": "10x-fn-04-pub-async-fn",
+		"body": [
+			"pub async fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
+			"\t${4}",
+			"\t${5:todo!()}",
+			"}"
+		],
+	},
+
+	// -- Error
+	"10x-error-variant-with-from": {
+		"prefix": "10x-error-variant-with-from",
+		"body": [
+			"#[from]",
+			"${1:VariantName}(${2}${3:Error}),"
+		],
+		"description": "jc-error-variant"
+	},	
+
+  // -- Test Snippets
+
+	"10x-test-module": {
+		"prefix": "10x-test-module-01",
+		"body": [
+			"// region:    --- Tests",
+			"",
+			"#[cfg(test)]",
+			"mod tests {",
+			"\tuse super::*;",
+			"\ttype Error = Box<dyn std::error::Error>;",
+			"\ttype Result<T> = core::result::Result<T, Error>;",
+			"",
+			"\t$1",
+			"}",
+			"",
+			"// endregion: --- Tests"
+		],
+		"description": "Unit test sub module boilerplate"
+	},
+
+	"10x-test-module-with-anyhow": {
+		"prefix": "10x-test-module-02-with-anyhow",
+		"body": [
+			"// region:    --- Tests",
+			"",
+			"#[cfg(test)]",
+			"mod tests {",
+			"\tuse super::*;",
+			"\tuse anyhow::Result;",
+			"",
+			"\t$1",
+			"}",
+			"",
+			"// endregion: --- Tests"
+		],
+		"description": "Unit test sub module boilerplate"
+	},	
+
+	"10x-test-fn": {
+		"prefix": "10x-test-fn-01",
+		"body": [
+			"#[test]",
+			"fn test_${1:name}() -> Result<()> {",
+			"\t${2}",
+			"\tOk(())",
+			"}"
+		],
+		"description": "Unit test function"
+	},
+
+	"10x-test-async-fn": {
+		"prefix": "10x-test-fn-02-async",
+		"body": [
+			"#[tokio::test]",
+			"async fn test_${1:name}() -> Result<()> {",
+			"\t${2}",
+			"\tOk(())",
+			"}"
+		],
+		"description": "Unit async test function"
+	},	
+}

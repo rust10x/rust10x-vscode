@@ -1,0 +1,88 @@
+{
+  // -- Cargo Toml
+
+	"10x-cargo-lints": {
+		"prefix": "10x-cargo-lints",
+		"body": [
+			"[lints.rust]",
+			"unsafe_code = \"forbid\"",
+			"# unused = \"allow\" # For exploratory dev.",
+			""
+		],
+	},
+
+	"10x-cargo-workspace-lints": {
+		"prefix": "10x-cargo-workspace-lints",
+		"body": [
+			"[workspace.lints.rust]",
+			"unsafe_code = \"forbid\"",
+			"# unused = \"allow\" # For exploratory dev.",
+			""
+		],
+	},
+
+  // -- Dependency Groups
+
+  "10x-dep-group-async": {
+		"prefix": "10x-dep-group-async",
+		"body": [
+			"# -- Async",
+			"tokio = { version = \"1\", features = [\"full\"] }",
+			""
+		],
+	},
+
+  "10x-dep-group-json": {
+		"prefix": "10x-dep-group-json",
+		"body": [
+			"# -- Json",
+			"serde = { version = \"1\", features = [\"derive\"] }",
+			"serde_json = \"1\"",
+			"serde_with = \"3\"",
+			""
+		],
+	},
+
+	"10x-dep-group-others": {
+		"prefix": "10x-dep-group-others",
+		"body": [
+			"# -- Others",
+			"derive_more = {version = \"1.0.0-beta\", features = [\"from\"] }",
+			""
+		],
+	},
+
+  // Note: This is for "simpler" CLI. Another group will be added for ratatui.
+	"10x-dep-group-cli": {
+		"prefix": "10x-dep-group-cli",
+		"body": [
+			"# -- Cli",
+      "clap = {version = \"4\", features = [\"cargo\"]}",
+			"dialoguer = \"0.11\"",
+			"console = \"0.15\"",
+			"textwrap = \"0.16\"",
+			""
+		],
+	},  
+
+	"10x-dep-group-files": {
+		"prefix": "10x-dep-group-files",
+		"body": [
+			"# -- Files",
+			"walkdir = \"2\"",
+			"globset = \"0.4\"",
+			""
+		],
+	},
+
+  // -- Dependency Individuals
+
+	"10x-dep-uuid": {
+		"prefix": "10x-dep-uuid",
+		"body": [
+			"uuid = {version = \"1\", features = [\"v4\",\"fast-rng\",]}",
+			""
+		],
+	},   
+
+}
