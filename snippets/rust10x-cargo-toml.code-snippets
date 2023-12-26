@@ -6,8 +6,7 @@
 		"body": [
 			"[lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = \"allow\" # For exploratory dev.",
-			""
+			"# unused = \"allow\" # For exploratory dev."
 		],
 	},
 
@@ -16,8 +15,7 @@
 		"body": [
 			"[workspace.lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = \"allow\" # For exploratory dev.",
-			""
+			"# unused = \"allow\" # For exploratory dev."
 		],
 	},
 
@@ -27,19 +25,17 @@
 		"prefix": "10x-dep-group-async",
 		"body": [
 			"# -- Async",
-			"tokio = { version = \"1\", features = [\"full\"] }",
-			""
+			"tokio = { version = \"1\", features = [\"full\"] }"
 		],
 	},
 
-  "10x-dep-group-json": {
-		"prefix": "10x-dep-group-json",
+  "10x-dep-group-serde-json": {
+		"prefix": "10x-dep-group-serde-json",
 		"body": [
 			"# -- Json",
 			"serde = { version = \"1\", features = [\"derive\"] }",
 			"serde_json = \"1\"",
-			"serde_with = \"3\"",
-			""
+			"serde_with = \"3\""
 		],
 	},
 
@@ -47,8 +43,7 @@
 		"prefix": "10x-dep-group-others",
 		"body": [
 			"# -- Others",
-			"derive_more = {version = \"1.0.0-beta\", features = [\"from\"] }",
-			""
+			"derive_more = {version = \"1.0.0-beta\", features = [\"from\"] }"
 		],
 	},
 
@@ -60,28 +55,33 @@
       "clap = {version = \"4\", features = [\"cargo\"]}",
 			"dialoguer = \"0.11\"",
 			"console = \"0.15\"",
-			"textwrap = \"0.16\"",
-			""
+			"textwrap = \"0.16\""
 		],
 	},  
 
 	"10x-dep-group-files": {
-		"prefix": "10x-dep-group-files",
+		"prefix": "10x-dep-group-files-01",
 		"body": [
 			"# -- Files",
 			"walkdir = \"2\"",
-			"globset = \"0.4\"",
-			""
+			"globset = \"0.4\""
 		],
 	},
+
+	"10x-dep-group-files-simple-fs": {
+		"prefix": "10x-dep-group-files-02-simple-fs",
+		"body": [
+			"# -- Files",
+			"simple-fs = { version = \"0.0.2\", features = [\"with-json\", \"with-toml\"] }"
+		],
+	},	
 
   // -- Dependency Individuals
 
 	"10x-dep-uuid": {
 		"prefix": "10x-dep-uuid",
 		"body": [
-			"uuid = {version = \"1\", features = [\"v4\",\"fast-rng\",]}",
-			""
+			"uuid = {version = \"1\", features = [\"v4\",\"fast-rng\",]}"
 		],
 	},   
 

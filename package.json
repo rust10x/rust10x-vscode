@@ -4,7 +4,7 @@
   "license": "MIT",
   "displayName": "Rust10x",
   "description": "Rust coding snippets and more. https://rust10x.com/vscode",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -33,6 +33,10 @@
       {
         "language": "toml",
         "path": "./snippets/rust10x-cargo-toml.code-snippets"
+      },
+      {
+        "filename": ".gitignore",
+        "path": "./snippets/rust10x-gitignore.code-snippets"
       }
     ]
   }

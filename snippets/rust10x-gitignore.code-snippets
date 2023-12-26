@@ -1,0 +1,62 @@
+{
+  "10x-gitignore-min": {
+		"prefix": "10x-gitignore-01-min",
+		"body": [
+			"# -- Base",
+			".*",
+			"!.gitignore",
+			"",
+			"# -- Rust",
+			"target/",
+			"Cargo.lock",
+			"!.cargo/"
+		],
+		"description": "10x-gitignore-01-min"
+	},
+
+	"10x-gitignore-more": {
+		"prefix": "10x-gitignore-02-more",
+		"body": [
+			"# -- Base",
+			".*",
+			"!.gitignore",
+			"",
+			"# Allow vscode",
+			"# !.vscode",
+			"",
+			"# -- Rust",
+			"target/",
+			"Cargo.lock",
+			"!.cargo/",
+			"",
+			"# -- Safety net",
+			"dist/",
+			"out/",
+			"",
+			"# Data Files",
+			"*.parquet",
+			"*.map",
+			"*.zip",
+			"*.gz",
+			"*.tar",
+			"*.tgz",
+			"*.vsix",
+			"",
+			"# Videos",
+			"*.mov",
+			"*.mp4",
+			"*.avi",
+			"",
+			"# Images",
+			"*.icns",
+			"*.ico",
+			"*.jpeg",
+			"*.jpg",
+			"*.png",
+			"",
+			"",
+			""
+		],
+		"description": "new_snippet"
+	},  
+}

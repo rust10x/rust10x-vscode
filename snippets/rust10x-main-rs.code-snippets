@@ -19,7 +19,7 @@
 		],
 	},
 
-	"10-main-rs-async": {
+	"10x-main-rs-async": {
 		"prefix": "10x-main-rs-02-async",
 		"body": [
 			"// region:    --- Modules",
