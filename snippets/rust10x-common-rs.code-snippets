@@ -166,9 +166,10 @@
 			"",
 			"#[cfg(test)]",
 			"mod tests {",
-			"\tuse super::*;",
 			"\ttype Error = Box<dyn std::error::Error>;",
-			"\ttype Result<T> = core::result::Result<T, Error>;",
+			"\ttype Result<T> = core::result::Result<T, Error>; // For tests.",
+			"",
+			"\tuse super::*;",
 			"",
 			"\t$1",
 			"}",
@@ -201,22 +202,32 @@
 		"body": [
 			"#[test]",
 			"fn test_${1:name}() -> Result<()> {",
+			"\t// -- Setup & Fixtures",
 			"\t${2}",
+			"\t// -- Exec",
+			"",
+			"\t// -- Check",
+			"",
 			"\tOk(())",
 			"}"
 		],
-		"description": "Unit test function"
-	},
+		"description": "Unit test function with comment scafolding"
+	},	
 
-	"10x-test-async-fn": {
+	"10x-test-fn-async": {
 		"prefix": "10x-test-fn-02-async",
 		"body": [
 			"#[tokio::test]",
 			"async fn test_${1:name}() -> Result<()> {",
+			"\t// -- Setup & Fixtures",
 			"\t${2}",
+			"\t// -- Exec",
+			"",
+			"\t// -- Check",
+			"",
 			"\tOk(())",
 			"}"
 		],
-		"description": "Unit async test function"
-	},	
+		"description": "Unit test asyncfunction with comment scafolding"
+	}	
 }

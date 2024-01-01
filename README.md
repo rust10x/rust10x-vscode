@@ -10,6 +10,8 @@ All snippets are prefixed with `10x-`, making them quick to select by just typin
 
 I haven't included keybindings as they are quite personal, but you can find the ones I use at [rust10x/vscode](https://rust10x.com/vscode).
 
+[GitHub Repo](https://github.com/rust10x/rust10x-vscode) | [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=rust10x.rust10x)
+
 More coming...
 
 Happy Coding!

@@ -1,5 +1,12 @@
 {
   // -- Cargo Toml
+	"10x-latest-rust-version": {
+		"prefix": "10x-latest-rust-version",
+		"body": [
+			"rust-version = \"1.75\""
+		],
+		"description": "10x-latest-rust-version"
+	},
 
 	"10x-cargo-lints": {
 		"prefix": "10x-cargo-lints",

@@ -91,11 +91,10 @@
 		"description": "error.rs boostrap code with derive_more::From"
 	},
 
-	"10x-error-rs-early-dev-box-dyn": {
-		"prefix": "10x-error-rs-04-early-dev-box-dyn", 
+	"10x-error-early-dev-box-dyn": {
+		"prefix": "10x-error-early-dev-box-dyn", 
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Error>;",
-			"",
 			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
 		],
 		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
