@@ -79,7 +79,7 @@
 		"prefix": "10x-dep-group-files-02-simple-fs",
 		"body": [
 			"# -- Files",
-			"simple-fs = { version = \"0.0.5\", features = [\"full\"] }"
+			"simple-fs = { version = \"0.1\", features = [\"full\"] }"
 		],
 	},	
 
