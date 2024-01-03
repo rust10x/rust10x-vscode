@@ -197,37 +197,68 @@
 		"description": "Unit test sub module boilerplate"
 	},	
 
-	"10x-test-fn": {
-		"prefix": "10x-test-fn-01",
+	"10x-test-fn-with-comment-scaffolding": {
+		"prefix": "10x-test-fn-01-with-comment-scaffolding",
 		"body": [
 			"#[test]",
 			"fn test_${1:name}() -> Result<()> {",
 			"\t// -- Setup & Fixtures",
 			"\t${2}",
 			"\t// -- Exec",
-			"",
+			"\t",
 			"\t// -- Check",
+			"\t",
+			"\t// -- Clean",
+			"\t",			
+			"\tOk(())",
+			"}"
+		],
+		"description": "Unit test function with comment scaffolding"
+	},	
+
+	"10x-test-fn-simple": {
+		"prefix": "10x-test-fn-02-simple",
+		"body": [
+			"#[test]",
+			"fn test_${1:name}() -> Result<()> {",
+			"\t${2}",
 			"",
 			"\tOk(())",
 			"}"
 		],
-		"description": "Unit test function with comment scafolding"
-	},	
+		"description": "Unit test function with comment scaffolding"
+	},		
 
-	"10x-test-fn-async": {
-		"prefix": "10x-test-fn-02-async",
+	"10x-test-async-fn-with-comment-scaffolding": {
+		"prefix": "10x-test-async-fn-01-with-comment-scaffolding",
 		"body": [
 			"#[tokio::test]",
 			"async fn test_${1:name}() -> Result<()> {",
 			"\t// -- Setup & Fixtures",
 			"\t${2}",
 			"\t// -- Exec",
-			"",
+			"\t",
 			"\t// -- Check",
-			"",
+			"\t",
+			"\t// -- Clean",
+			"\t",			
 			"\tOk(())",
 			"}"
 		],
-		"description": "Unit test asyncfunction with comment scafolding"
-	}	
+		"description": "Unit test function with comment scaffolding"
+	},	
+
+	"10x-test-async-fn-simple": {
+		"prefix": "10x-test-async-fn-02-simple",
+		"body": [
+			"#[tokio::test]",
+			"async fn test_${1:name}() -> Result<()> {",
+			"\t${2}",
+			"\t",
+			"\tOk(())",
+			"}"
+		],
+		"description": "Unit test function with comment scaffolding"
+	},		
+
 }
