@@ -92,4 +92,11 @@
 		],
 	},   
 
+	"10x-dep-futures-async": {
+		"prefix": "10x-dep-futures-async",
+		"body": [
+			"futures = \"0.3\""
+		],
+	},  	
+
 }

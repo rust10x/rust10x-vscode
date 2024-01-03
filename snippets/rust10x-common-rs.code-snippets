@@ -26,7 +26,7 @@
 			"// region:    --- Modules",
 			"${1}"
 			"use ${2:crate}::{${3}Result};"
-			"",
+			"${4}",
 			"// endregion: --- Modules"
 		],
 		"description": "Simple modules section (default `use crate::Error`)"
@@ -47,6 +47,7 @@
 	},		
 
 	// -- Impl Snippets
+
 	"10x-impl-from": {
 		"prefix": "10x-impl-from",
 		"body": [
@@ -73,6 +74,7 @@
 	},
 	
 	// -- Wrapper Snippets
+
 	"10x-wrap-option": {
 		"prefix": "10x-wrap-option",
 		"body": [
@@ -148,6 +150,33 @@
 	},
 
 	// -- Error
+
+	"10x-error-early-dev-box-dyn": {
+		"prefix": "10x-error-early-dev-box-dyn", 
+		"body": [
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"",
+			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
+		],
+		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
+	},
+	
+	"10x-error-re-export-self-error-result": {
+		"prefix": "10x-error-re-export-self-error-result", 
+		"body": [
+			"pub use self::error::{Error, Result};",
+		],
+		"description": "pub use of self Error/Result"
+	},
+
+	"10x-error-use-result-error": {
+		"prefix": "10x-error-use-result-error",
+		"body": [
+			"use ${1:crate}::{${2}Result};"
+		],
+		"description": "use crate::{..,Result};"
+	},	
+
 	"10x-error-variant-with-from": {
 		"prefix": "10x-error-variant-with-from",
 		"body": [
@@ -155,6 +184,14 @@
 			"${1:VariantName}(${2}${3:Error}),"
 		],
 		"description": "jc-error-variant"
+	},
+
+	// -- Debug
+
+	"10x-debug-println": {
+		"prefix": "10x-debug-println",
+		"body": [ "println!(\"->> $1{$2}$3\"$4);"],
+		"description": "println"
 	},	
 
   // -- Test Snippets
