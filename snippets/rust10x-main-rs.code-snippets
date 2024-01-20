@@ -30,7 +30,7 @@
 			"",
 			"// endregion: --- Modules",
 			"",
-			"#[tokio::main]"
+			"#[tokio::main]",
 			"async fn main() -> Result<()> {",
 			"\tprintln!(\"Hello, world!\");",
 			"",

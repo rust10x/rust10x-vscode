@@ -24,8 +24,8 @@
 		"prefix": "10x-modules-section-01",
 		"body": [
 			"// region:    --- Modules",
-			"${1}"
-			"use ${2:crate}::{${3}Result};"
+			"${1}",
+			"use ${2:crate}::{${3}Result};",
 			"${4}",
 			"// endregion: --- Modules"
 		],
@@ -39,7 +39,7 @@
 			"",
 			"mod error;",
 			"${1}",
-			"pub use error::{Error, Result};"
+			"pub use error::{Error, Result};",
 			"",
 			"// endregion: --- Modules"
 		],

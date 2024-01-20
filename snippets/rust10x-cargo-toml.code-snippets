@@ -1,11 +1,31 @@
 {
-  // -- Cargo Toml
+
+	// -- Cargo Toml Full Template
+	"10x-cargo-toml-default": {
+		"prefix": "10x-cargo-toml-default",
+		"body": [
+			"[package]",
+			"name = \"${1:package_name}\"",
+			"version = \"0.1.0\"",
+			"edition = \"2021\"",
+			"rust-version = \"1.75\"",
+			"",
+			"[lints.rust]",
+			"unsafe_code = \"forbid\"",
+			"# unused = \"allow\" # For exploratory dev.$2",
+			"",
+			"[dependencies]",
+			"$3"
+		],
+	},
+
+  // -- Cargo Toml Snippets
+
 	"10x-latest-rust-version": {
 		"prefix": "10x-latest-rust-version",
 		"body": [
 			"rust-version = \"1.75\""
 		],
-		"description": "10x-latest-rust-version"
 	},
 
 	"10x-cargo-lints": {
