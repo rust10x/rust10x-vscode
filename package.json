@@ -4,7 +4,7 @@
   "license": "MIT",
   "displayName": "Rust10x",
   "description": "Rust coding snippets and more. https://rust10x.com/vscode",
-  "version": "0.1.2",
+  "version": "0.1.3-ALPHA.1",
   "engines": {
     "vscode": "^1.85.0"
   },
