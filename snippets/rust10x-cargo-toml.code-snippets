@@ -8,7 +8,7 @@
 			"name = \"${1:package_name}\"",
 			"version = \"0.1.0\"",
 			"edition = \"2021\"",
-			"rust-version = \"1.75\"",
+			"rust-version = \"1.76\"",
 			"",
 			"[lints.rust]",
 			"unsafe_code = \"forbid\"",
@@ -24,7 +24,7 @@
 	"10x-latest-rust-version": {
 		"prefix": "10x-latest-rust-version",
 		"body": [
-			"rust-version = \"1.75\""
+			"rust-version = \"1.76\""
 		],
 	},
 
