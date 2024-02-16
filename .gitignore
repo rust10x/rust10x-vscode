@@ -5,7 +5,7 @@
 # -- VSCode extension
 !.vscodeignore
 *.vsix
-
+package-lock.json
 
 # -- Rust
 target/
