@@ -155,7 +155,6 @@
 		"prefix": "10x-error-early-dev-box-dyn", 
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Error>;",
-			"",
 			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
 		],
 		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
