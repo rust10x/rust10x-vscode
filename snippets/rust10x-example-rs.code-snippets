@@ -1,0 +1,61 @@
+{
+	"10-example-rs": {
+		"prefix": "10-example-rs-01",
+		"body": [
+			"use ${1:xp_lib_name}::Result;",
+			"",
+			"fn main() -> Result<()> {",
+			"\t${2}println!(\"Hello, world!\");",
+			"",
+			"\tOk(())",
+			"}",
+			""
+		],
+	},
+
+	"10-example-rs-async": {
+		"prefix": "10-example-rs-02-async",
+		"body": [
+			"use ${1:xp_lib_name}::Result;",
+			"",
+			"#[tokio::main]",
+			"async fn main() -> Result<()> {",
+			"\t${2}println!(\"Hello, world!\");",
+			"",
+			"\tOk(())",
+			"}",
+			""
+		],
+	},
+
+	"10-example-rs-early": {
+		"prefix": "10-example-rs-03-early-dev",
+		"body": [
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
+			"${1}",
+			"fn main() -> Result<()> {",
+			"\t${2}println!(\"Hello, world!\");",
+			"",
+			"\tOk(())",
+			"}",
+			""
+		],
+	},
+
+	"10-example-rs-early-dev-async": {
+		"prefix": "10-example-rs-04-early-dev-async",
+		"body": [
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
+			"${1}",
+			"#[tokio::main]",
+			"async fn main() -> Result<()> {",
+			"\t${2}println!(\"Hello, world!\");",
+			"",
+			"\tOk(())",
+			"}",
+			""
+		],
+	},	
+}
