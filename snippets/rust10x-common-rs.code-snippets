@@ -185,6 +185,14 @@
 		"description": "jc-error-variant"
 	},
 
+	"10x-box-dyn-error": {
+		"prefix": "10x-box-dyn-error",
+		"body": [
+			"Box<dyn std::error::Error>",
+		],
+		"description": "Box<dyn ..>"
+	},
+
 	// -- Debug
 
 	"10x-debug-println": {
