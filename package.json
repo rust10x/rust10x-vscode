@@ -28,6 +28,10 @@
       },
       {
         "language": "rust",
+        "path": "./snippets/rust10x-lib-rs.code-snippets"
+      },      
+      {
+        "language": "rust",
         "path": "./snippets/rust10x-error-rs.code-snippets"
       },
       {

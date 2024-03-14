@@ -1,0 +1,30 @@
+{
+	"10x-lib-rs": {
+		"prefix": "10x-lib-rs-01",
+		"body": [
+			"// region:    --- Modules",
+			"",
+			"mod error${1};",
+			"",
+			"pub use error::{Error, Result};",
+			"",
+			"// endregion: --- Modules",
+			""
+		],
+	},
+
+	"10x-main-rs-early": {
+		"prefix": "10x-lib-rs-02-early-dev",
+		"body": [
+			"// region:    --- Modules",
+			"",
+			"pub type Result<T> = core::result::Result<T, Error>;",
+			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
+			"${1}",
+			"// endregion: --- Modules",			
+			"${1}",
+			""
+		],
+	}
+
+}
