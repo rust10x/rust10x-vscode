@@ -1,6 +1,6 @@
 {
-	"10-example-rs": {
-		"prefix": "10-example-rs-01",
+	"10x-example-rs": {
+		"prefix": "10x-example-rs-01",
 		"body": [
 			"use ${1:xp_lib_name}::Result;",
 			"",
@@ -13,8 +13,8 @@
 		],
 	},
 
-	"10-example-rs-async": {
-		"prefix": "10-example-rs-02-async",
+	"10x-example-rs-async": {
+		"prefix": "10x-example-rs-02-async",
 		"body": [
 			"use ${1:xp_lib_name}::Result;",
 			"",
@@ -28,8 +28,8 @@
 		],
 	},
 
-	"10-example-rs-early": {
-		"prefix": "10-example-rs-03-early-dev",
+	"10x-example-rs-early": {
+		"prefix": "10x-example-rs-03-early-dev",
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Error>;",
 			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
@@ -43,8 +43,8 @@
 		],
 	},
 
-	"10-example-rs-early-dev-async": {
-		"prefix": "10-example-rs-04-early-dev-async",
+	"10x-example-rs-early-dev-async": {
+		"prefix": "10x-example-rs-04-early-dev-async",
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Error>;",
 			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
