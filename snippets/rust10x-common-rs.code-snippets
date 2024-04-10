@@ -106,6 +106,14 @@
 		],
 		"description": "Wrap Selection as Arc<Selection>"
 	},	
+
+	"10x-arg-impl-into-string": {
+		"prefix": "10x-arg-impl-into-string",
+		"body": [
+			"impl Into<${1:String}>"
+		],
+		"description": "10x-arg-impl-into-string"
+	},
   
 	// -- Functions
 
@@ -305,7 +313,7 @@
 	"10x-allow-module-inception": {
 		"prefix": "10x-allow-module-inception",
 		"body": [
-			"#[allow(clippy::module_inception)]"
+			"#${1}[allow(clippy::module_inception)]"
 		],
 		"description": "10x-allow-module-inception"
 	},
@@ -313,7 +321,7 @@
 	"10x-allow-unused": {
 		"prefix": "10x-allow-unused",
 		"body": [
-			"#[allow(unused)]"
+			"#${1}[allow(unused)]"
 		],
 		"description": "10x-allow-unused"
 	},	
