@@ -299,6 +299,22 @@
 			"}"
 		],
 		"description": "Unit test function with comment scaffolding"
-	},		
+	},
 
+
+	"10x-allow-module-inception": {
+		"prefix": "10x-allow-module-inception",
+		"body": [
+			"#[allow(clippy::module_inception)]"
+		],
+		"description": "10x-allow-module-inception"
+	},
+
+	"10x-allow-unused": {
+		"prefix": "10x-allow-unused",
+		"body": [
+			"#[allow(unused)]"
+		],
+		"description": "10x-allow-unused"
+	},	
 }
