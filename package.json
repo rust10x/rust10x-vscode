@@ -16,7 +16,26 @@
   "categories": [
     "Snippets"
   ],
+  "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "rust10x.eol_scolon",
+        "title": "rust10x.eol_scolon"
+      },
+      {
+        "command": "rust10x.eol_question_scolon",
+        "title": "rust10x.eol_question_scolon"
+      },
+      {
+        "command": "rust10x.eol_await_scolon",
+        "title": "rust10x.eol_await_scolon"
+      },         
+      {
+        "command": "rust10x.eol_await_question_scolon",
+        "title": "rust10x.eol_await_question_scolon"
+      }          
+    ],
     "snippets": [
       {
         "language": "rust",
@@ -47,5 +66,14 @@
         "path": "./snippets/rust10x-gitignore.code-snippets"
       }
     ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "20.x",
+    "glob": "^10",
+    "mocha": "^10.4.0",
+    "typescript": "^5.4",
+    "@vscode/test-electron": "^2.3.9"
   }
 }
