@@ -53,37 +53,6 @@ function make_eol_cmd_fn(type: EolType): Fn {
 
 }
 
-function eol_scolon_applier(document: vscode.TextDocument, selection: vscode.Selection, edit: vscode.WorkspaceEdit) {
-	const line = document.lineAt(selection.active.line);
-	const lineText = line.text;
-	const match = findLongestMatch(lineText);
-	if (match == null) {
-		const position = line.range.end;
-		edit.insert(document.uri, position, ';');
-	} else if (match.value != ";") {
-		let newText = lineText.slice(0, -1 * match.value.length) + ";";
-		const lineRange = line.range;
-		edit.replace(document.uri, lineRange, newText);
-	}
-}
-
-function eol_question_scolon_applier(document: vscode.TextDocument, selection: vscode.Selection, edit: vscode.WorkspaceEdit) {
-	const line = document.lineAt(selection.active.line);
-	if (!line.text.endsWith('?;')) {
-		const position = line.range.end;
-		edit.insert(document.uri, position, '?;');
-	}
-}
-
-function eol_await_question_scolon_applier(document: vscode.TextDocument, selection: vscode.Selection, edit: vscode.WorkspaceEdit) {
-	const line = document.lineAt(selection.active.line);
-	if (!line.text.endsWith('?;')) {
-		const position = line.range.end;
-		edit.insert(document.uri, position, '?;');
-	}
-}
-
-
 // #region    --- Support
 
 interface MatchResult {
