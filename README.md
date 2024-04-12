@@ -16,6 +16,8 @@ I haven't included keybindings as they are more of personal preferences personal
 
 ### 2) Commands
 
+See [YouTube Video](https://www.youtube.com/watch?v=Ek9_WtxCNjw&list=PL7r-PXl6ZPcCIOFaL7nVHXZvBmHNhrh_Q) about the `eol...` commands. 
+
 NEW in version 0.1.5 and later.
 
 The `eol_...` commands allow toggling the end-of-line completion. They will replace the existing end-of-line character with the one specified by the command.
