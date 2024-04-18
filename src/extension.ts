@@ -24,7 +24,12 @@ export function activate(context: vscode.ExtensionContext) {
 	// -- rust10x.eol_await_question_scolon
 	disposable = vscode.commands.registerCommand('rust10x.eol_await_question_scolon', make_eol_cmd_fn("eol_await_question_scolon"));
 	context.subscriptions.push(disposable);
+
+	// -- rust10x.eol_comma
+	disposable = vscode.commands.registerCommand('rust10x.eol_comma', cmd_eol_comma);
+	context.subscriptions.push(disposable);
 }
+
 
 export function deactivate() { }
 type Fn = (...args: any[]) => any;
@@ -53,6 +58,34 @@ function make_eol_cmd_fn(type: EolType): Fn {
 
 }
 
+function cmd_eol_comma() {
+
+	const editor = vscode.window.activeTextEditor;
+	if (!editor) {
+		vscode.window.showInformationMessage('No open text editor');
+		return;
+	}
+
+	const document = editor.document;
+	const sels = editor.selections;
+
+	const edit = new vscode.WorkspaceEdit();
+	for (const sel of sels) {
+		const line = document.lineAt(sel.active.line);
+		const lineText = line.text;
+		const ending = ",";
+
+		if (!lineText.endsWith(ending)) {
+			const position = line.range.end;
+			edit.insert(document.uri, position, ending);
+		}
+	}
+
+	vscode.workspace.applyEdit(edit);
+
+	// now move selection to the end
+	move_selection_cursors_to_end(editor);
+}
 // #region    --- Support
 
 interface MatchResult {
@@ -98,15 +131,23 @@ function apply_for_each(applier: ApplierFn) {
 	vscode.workspace.applyEdit(edit);
 
 	// now move selection to the end
+	move_selection_cursors_to_end(editor);
+}
+
+function move_selection_cursors_to_end(editor: vscode.TextEditor) {
+	const document = editor.document;
 	const sels = editor.selections;
+	const eol_sels: vscode.Selection[] = [];
 	for (const sel of sels) {
 		const newLine = document.lineAt(sel.active.line);
 		const endOfLinePosition = new vscode.Position(sel.active.line, newLine.text.length);
-
-		editor.selection = new vscode.Selection(endOfLinePosition, endOfLinePosition);
-		editor.revealRange(new vscode.Range(endOfLinePosition, endOfLinePosition));
+		const eol_sel = new vscode.Selection(endOfLinePosition, endOfLinePosition);
+		eol_sels.push(eol_sel);
 	}
+	editor.selections = eol_sels;
 
+	// Optionally, show/scroll the last line
+	// editor.revealRange(new vscode.Range(endOfLinePosition, endOfLinePosition));
 }
 
 // #endregion --- Support

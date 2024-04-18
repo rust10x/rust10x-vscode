@@ -34,7 +34,11 @@
       {
         "command": "rust10x.eol_await_question_scolon",
         "title": "rust10x.eol_await_question_scolon"
-      }          
+      },
+      {
+        "command": "rust10x.eol_comma",
+        "title": "rust10x.eol_comma"
+      }
     ],
     "snippets": [
       {
