@@ -1,5 +1,6 @@
 {
   // -- Comment Snippets
+
 	"10x-comment-section": {
 		"prefix": "10x-comment-section",
 		"body": [
@@ -37,14 +38,24 @@
 		"body": [
 			"// region:    --- Modules",
 			"",
-			"mod error;",
-			"${1}",
+			"mod error;${1}",
+			"",
 			"pub use error::{Error, Result};",
 			"",
 			"// endregion: --- Modules"
 		],
 		"description": "Modules sections with module error"
-	},		
+	},
+
+	"10x-modules-content-error": {
+		"prefix": "10x-modules-content-error",
+		"body": [
+			"mod error;${1}",
+			"",
+			"pub use self::error::{Error, Result};"
+		],
+		"description": "Modules content with the mode error and re-export"
+	},	
 
 	// -- Impl Snippets
 
