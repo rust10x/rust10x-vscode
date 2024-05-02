@@ -28,12 +28,22 @@ The `eol_...` commands allow toggling the end-of-line completion. They will repl
 | `rust10x.eol_question_scolon`       | `?;`       | `cmd+alt+;`       |
 | `rust10x.eol_await_scolon`          | `.await;`  | `cmd+ctrl+;`      |
 | `rust10x.eol_await_question_scolon` | `.await?;` | `cmd+ctrl+alt+;`  |
+| `rust10x.eol_comma`                 | `,`        | `cmd+shift+,`     |
+
+
+Other cool command: 
+
+| Command                 | Note                                     | Possible bindings |
+|-------------------------|------------------------------------------|-------------------|
+| `rust10x.open_error_rs` | Open/Focus the closest parent `error.rs` | `cmd+ctrl+e`      |
+
+You can find the my keybindings at [rust10x/vscode](https://rust10x.com/vscode).
 
 
 > Note: I am showing the keybindings I use for these commands, but they are not set in this extension, as they might already be in use.
 > <br />In short, the pattern for these bindings is that `alt` adds the `?`, and `ctrl` adds the `.await`.
 
-You can find the my keybindings at [rust10x/vscode](https://rust10x.com/vscode).
+
 
 [GitHub Repo](https://github.com/rust10x/rust10x-vscode) | [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=rust10x.rust10x)
 
