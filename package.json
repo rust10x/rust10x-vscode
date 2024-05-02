@@ -38,7 +38,11 @@
       {
         "command": "rust10x.eol_comma",
         "title": "rust10x.eol_comma"
-      }
+      },
+      {
+        "command": "rust10x.open_error_rs",
+        "title": "rust10x.open_error_rs"
+      }      
     ],
     "snippets": [
       {

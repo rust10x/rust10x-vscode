@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { cmd_eol_comma, make_eol_cmd_fn } from './eol';
+import { cmd_open_error_rs } from './open_error_editor';
 
 export function activate(context: vscode.ExtensionContext) {
 	// -- eol_scolon
@@ -20,6 +21,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// -- rust10x.eol_comma
 	disposable = vscode.commands.registerCommand('rust10x.eol_comma', cmd_eol_comma);
+	context.subscriptions.push(disposable);
+
+	// -- rust10x.open_error
+	disposable = vscode.commands.registerCommand('rust10x.open_error_rs', cmd_open_error_rs);
 	context.subscriptions.push(disposable);
 }
 
