@@ -12,7 +12,7 @@
 			"",
 			"[lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = \"allow\" # For exploratory dev.$2",
+			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev.$2",
 			"",
 			"[dependencies]",
 			"$3"
@@ -33,7 +33,7 @@
 		"body": [
 			"[lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = \"allow\" # For exploratory dev."
+			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev."
 		],
 	},
 
@@ -42,7 +42,7 @@
 		"body": [
 			"[workspace.lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = \"allow\" # For exploratory dev."
+			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev."
 		],
 	},
 
