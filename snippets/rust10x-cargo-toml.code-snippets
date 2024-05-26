@@ -24,7 +24,7 @@
 	"10x-latest-rust-version": {
 		"prefix": "10x-latest-rust-version",
 		"body": [
-			"rust-version = \"1.76\""
+			"rust-version = \"1.78\""
 		],
 	},
 
