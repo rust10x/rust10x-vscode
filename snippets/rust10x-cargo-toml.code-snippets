@@ -8,7 +8,7 @@
 			"name = \"${1:package_name}\"",
 			"version = \"0.1.0\"",
 			"edition = \"2021\"",
-			"rust-version = \"1.77\"",
+			"rust-version = \"1.78\"",
 			"",
 			"[lints.rust]",
 			"unsafe_code = \"forbid\"",
