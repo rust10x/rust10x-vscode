@@ -40,6 +40,7 @@
 			"out/",
 			"",
 			"# Data Files",
+			"*.db3",
 			"*.parquet",
 			"*.map",
 			"*.zip",
