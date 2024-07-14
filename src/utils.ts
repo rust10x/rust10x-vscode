@@ -47,7 +47,7 @@ export async function show_editor_for_uri(uri: vscode.Uri) {
 			const tab_fs_path = tab_input.uri.fsPath;
 			if (tab_fs_path === targetFsPath) {
 				// NOTE: Unfortunately, `tabGroups`/`group.activeTab` are read-only.
-				//       So the way to wory around it is to use the viewColumn which seems 
+				//       So the way to work around it is to use the viewColumn which seems 
 				//       to match the group idx+1, at least in most cases
 				const text_doc = await vscode.workspace.openTextDocument(uri);
 				vscode.window.showTextDocument(text_doc, { preview: false, preserveFocus: false, viewColumn: col });

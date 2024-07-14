@@ -190,7 +190,7 @@
 	"10x-error-use-result-error": {
 		"prefix": "10x-error-use-result-error",
 		"body": [
-			"use ${1:crate}::${2:Result};"
+			"use crate::${1:Result};"
 		],
 		"description": "use crate::{..,Result};"
 	},	
