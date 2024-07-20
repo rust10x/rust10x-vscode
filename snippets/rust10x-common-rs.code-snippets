@@ -52,7 +52,7 @@
 		"body": [
 			"mod error;${1}",
 			"",
-			"pub use self::error::{Error, Result};"
+			"pub use error::{Error, Result};"
 		],
 		"description": "Modules content with the mode error and re-export"
 	},	
@@ -178,11 +178,27 @@
 		],
 		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
 	},
+
+	"10x-result-type-box-dyn-error": {
+		"prefix": "10x-result-type-box-dyn-error",
+		"body": [
+			"pub type Result<T> = core::result::Result<T, Box<dyn std::error::Error>>;",
+		],
+		"description": "Result... box dyn"
+	},
+
+	"10x-result-void-box-dyn-error": {
+		"prefix": "10x-result-void-box-dyn-error",
+		"body": [
+			"Result<(), Box<dyn std::error::Error>>${1}",
+		],
+		"description": "Result<(), box dyn..>"
+	},	
 	
 	"10x-error-re-export-self-error-result": {
 		"prefix": "10x-error-re-export-self-error-result", 
 		"body": [
-			"pub use self::error::{Error, Result};",
+			"pub use error::{Error, Result};",
 		],
 		"description": "pub use of self Error/Result"
 	},
