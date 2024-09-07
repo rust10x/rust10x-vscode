@@ -179,18 +179,26 @@
 		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
 	},
 
-	"10x-result-type-box-dyn-error": {
-		"prefix": "10x-result-type-box-dyn-error",
+	"10x-type-result-box-dyn-error": {
+		"prefix": "10x-type-result-box-dyn-error",
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Box<dyn std::error::Error>>;",
 		],
 		"description": "Result... box dyn"
 	},
 
-	"10x-result-void-box-dyn-error": {
-		"prefix": "10x-result-void-box-dyn-error",
+	"10x-result": {
+		"prefix": "10x-result",
 		"body": [
-			"Result<(), Box<dyn std::error::Error>>${1}",
+			"Result<${1:()}>",
+		],
+		"description": "Result<()>"
+	},
+
+	"10x-result-box-dyn-error": {
+		"prefix": "10x-result-box-dyn-error",
+		"body": [
+			"Result<${1:()}, Box<dyn std::error::Error>>${2}",
 		],
 		"description": "Result<(), box dyn..>"
 	},	
