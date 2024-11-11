@@ -1,4 +1,24 @@
 {
+
+	"10x-gitignore-devai-section": {
+		"prefix": "10x-gitignore-devai-section",
+		"body": [
+			"# -- Devai",
+			"# Only allow .devai/custom and .devai/Config.toml",
+			"# Note: Here the starting `/` will just include the top .devai. ",
+			"#       Remove the starting `/` to include all .devai/custom even if their in a sub dir",
+			"!/.devai/",
+			".devai/*",
+			"!.devai/custom/",
+			"!.devai/custom/**",
+			"!.devai/Config.toml",
+			"# Ignore the .devai (typically temporary solos)",
+			"src/**/*.devai",
+			"",			
+		],
+		"description": "10x-gitignore devai section"
+	},
+
   "10x-gitignore-min": {
 		"prefix": "10x-gitignore-01-min",
 		"body": [
@@ -20,7 +40,7 @@
 			"!.cargo/",
 			"",
 		],
-		"description": "10x-gitignore-01-min"
+		"description": "10x-gitignore minmum template"
 	},
 
 	"10x-gitignore-more": {
@@ -43,7 +63,20 @@
 			"# !Cargo.lock # commented by default",
 			"!.cargo/",
 			"",
+			"# -- Devai",
+			"# Only allow .devai/custom and .devai/Config.toml",
+			"# Note: Here the starting `/` will just include the top .devai. ",
+			"#       Remove the starting `/` to include all .devai/custom even if their in a sub dir",
+			"!/.devai/",
+			".devai/*",
+			"!.devai/custom/",
+			"!.devai/custom/**",
+			"!.devai/Config.toml",
+			"# Ignore the .devai (typically temporary solos)",
+			"src/**/*.devai",		
+			"",
 			"# -- Safety net",
+			"",
 			"dist/",
 			"out/",
 			"",
@@ -89,6 +122,6 @@
 			"# !.vscode # Commented by default",
 			""
 		],
-		"description": "new_snippet"
+		"description": "10x-gitgnore full template"
 	},  
 }
