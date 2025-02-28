@@ -1,87 +1,90 @@
 {
-  "name": "rust10x",
-  "publisher": "Rust10x",
-  "license": "MIT",
-  "displayName": "Rust10x",
-  "description": "Rust coding snippets and more. https://rust10x.com/vscode",
-  "version": "0.1.11-wip",
-  "engines": {
-    "vscode": "^1.85.0"
-  },
-  "icon": "icon.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rust10x/rust10x-vscode"
-  },  
-  "categories": [
-    "Snippets"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "rust10x.eol_scolon",
-        "title": "rust10x.eol_scolon"
-      },
-      {
-        "command": "rust10x.eol_question_scolon",
-        "title": "rust10x.eol_question_scolon"
-      },
-      {
-        "command": "rust10x.eol_await_scolon",
-        "title": "rust10x.eol_await_scolon"
-      },         
-      {
-        "command": "rust10x.eol_await_question_scolon",
-        "title": "rust10x.eol_await_question_scolon"
-      },
-      {
-        "command": "rust10x.eol_comma",
-        "title": "rust10x.eol_comma"
-      },
-      {
-        "command": "rust10x.open_error_rs",
-        "title": "rust10x.open_error_rs"
-      }      
-    ],
-    "snippets": [
-      {
-        "language": "rust",
-        "path": "./snippets/rust10x-common-rs.code-snippets"
-      },
-      {
-        "language": "rust",
-        "path": "./snippets/rust10x-main-rs.code-snippets"
-      },
-      {
-        "language": "rust",
-        "path": "./snippets/rust10x-lib-rs.code-snippets"
-      },      
-      {
-        "language": "rust",
-        "path": "./snippets/rust10x-error-rs.code-snippets"
-      },
-      {
-        "language": "rust",
-        "path": "./snippets/rust10x-example-rs.code-snippets"
-      },      
-      {
-        "language": "toml",
-        "path": "./snippets/rust10x-cargo-toml.code-snippets"
-      },
-      {
-        "filename": ".gitignore",
-        "path": "./snippets/rust10x-gitignore.code-snippets"
-      }
-    ]
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.85.0",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "20.x",
-    "glob": "^10",
-    "mocha": "^10.4.0",
-    "typescript": "^5.4",
-    "@vscode/test-electron": "^2.3.9"
-  }
+	"name": "rust10x",
+	"publisher": "Rust10x",
+	"license": "MIT",
+	"displayName": "Rust10x",
+	"description": "Rust coding snippets and more. https://rust10x.com/vscode",
+	"version": "0.1.11-wip",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rust10x/rust10x-vscode"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "rust10x.eol_scolon",
+				"title": "rust10x.eol_scolon"
+			},
+			{
+				"command": "rust10x.eol_question_scolon",
+				"title": "rust10x.eol_question_scolon"
+			},
+			{
+				"command": "rust10x.eol_await_scolon",
+				"title": "rust10x.eol_await_scolon"
+			},
+			{
+				"command": "rust10x.eol_await_question_scolon",
+				"title": "rust10x.eol_await_question_scolon"
+			},
+			{
+				"command": "rust10x.eol_comma",
+				"title": "rust10x.eol_comma"
+			},
+			{
+				"command": "rust10x.open_error_rs",
+				"title": "rust10x.open_error_rs"
+			}
+		],
+		"snippets": [
+			{
+				"language": "rust",
+				"path": "./snippets/rust10x-common-rs.code-snippets"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/rust10x-main-rs.code-snippets"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/rust10x-lib-rs.code-snippets"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/rust10x-error-rs.code-snippets"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/rust10x-example-rs.code-snippets"
+			},
+			{
+				"language": "toml",
+				"path": "./snippets/rust10x-cargo-toml.code-snippets"
+			},
+			{
+				"filename": ".gitignore",
+				"path": "./snippets/rust10x-gitignore.code-snippets"
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.85.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "20.x",
+		"glob": "^10",
+		"mocha": "^10.4.0",
+		"typescript": "^5.4",
+		"@vscode/test-electron": "^2.3.9"
+	},
+	"__metadata": {
+		"size": 45892760
+	}
 }
