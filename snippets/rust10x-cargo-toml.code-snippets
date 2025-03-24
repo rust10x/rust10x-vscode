@@ -70,7 +70,7 @@
 		"prefix": "10x-dep-group-others",
 		"body": [
 			"# -- Others",
-			"derive_more = {version = \"1.0.0-beta\", features = [\"from\"] }"
+			"derive_more = {version = \"2\", features = [\"from\"] }"
 		],
 	},
 
