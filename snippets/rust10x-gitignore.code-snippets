@@ -82,6 +82,7 @@
 			"dist/",
 			"out/",
 			"cdk.out/",
+			"*.exe",
 			"",
 			"# Doc Files",
 			"*.pdf",
