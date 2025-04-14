@@ -83,8 +83,5 @@
 		"mocha": "^10.4.0",
 		"typescript": "^5.4",
 		"@vscode/test-electron": "^2.3.9"
-	},
-	"__metadata": {
-		"size": 45892760
 	}
 }
