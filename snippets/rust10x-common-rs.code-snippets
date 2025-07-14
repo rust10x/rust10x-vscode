@@ -243,6 +243,14 @@
 		"body": [ "println!(\"->> $1{$2}$3\"$4);"],
 		"description": "println"
 	},	
+	
+	"10x-debug-tracing": {
+		"prefix": "10x-debug-tracing",
+		"body": [
+			"tracing::debug!(\"->> $1{$2}$3\"$4);"
+		],
+		"description": "tracing debug"
+	},
 
   // -- Test Snippets
 
