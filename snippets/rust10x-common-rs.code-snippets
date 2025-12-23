@@ -1,25 +1,23 @@
 {
-  // -- Comment Snippets
+	// -- Comment Snippets
 
 	"10x-comment-section": {
 		"prefix": "10x-comment-section",
 		"body": [
 			"// region:    --- ${1:Section}",
 			"${2}$TM_SELECTED_TEXT",
-			"// endregion: --- ${1:Section}"
+			"// endregion: --- ${1:Section}",
 		],
-		"description": "Comment Section"
+		"description": "Comment Section",
 	},
 
 	"10x-comment-delimiter": {
 		"prefix": "10x-comment-delimiter",
-		"body": [
-			"// -- ${1}",
-		],
-		"description": "Comment Delimiter"
-	},	
+		"body": ["// -- ${1}"],
+		"description": "Comment Delimiter",
+	},
 
-  // -- Modules Snippets
+	// -- Modules Snippets
 
 	"10x-modules-section": {
 		"prefix": "10x-modules-section-01",
@@ -28,9 +26,9 @@
 			"${1}",
 			"use ${2:crate}::{${3}Result};",
 			"${4}",
-			"// endregion: --- Modules"
+			"// endregion: --- Modules",
 		],
-		"description": "Simple modules section (default `use crate::Error`)"
+		"description": "Simple modules section (default `use crate::Error`)",
 	},
 
 	"10x-modules-with-error-section": {
@@ -42,20 +40,16 @@
 			"",
 			"pub use error::{Error, Result};",
 			"",
-			"// endregion: --- Modules"
+			"// endregion: --- Modules",
 		],
-		"description": "Modules sections with module error"
+		"description": "Modules sections with module error",
 	},
 
 	"10x-modules-content-error": {
 		"prefix": "10x-modules-content-error",
-		"body": [
-			"mod error;${1}",
-			"",
-			"pub use error::{Error, Result};"
-		],
-		"description": "Modules content with the mode error and re-export"
-	},	
+		"body": ["mod error;${1}", "", "pub use error::{Error, Result};"],
+		"description": "Modules content with the mode error and re-export",
+	},
 
 	// -- Impl Snippets
 
@@ -66,10 +60,10 @@
 			"\tfn from(val: ${1}) -> Self {",
 			"\t\t$3",
 			"\t}",
-			"}"
+			"}",
 		],
-		"description": "impl From implementation"
-	},	
+		"description": "impl From implementation",
+	},
 
 	"10x-impl-try-from": {
 		"prefix": "10x-impl-try-from",
@@ -79,53 +73,43 @@
 			"\tfn try_from(val: ${1}) -> Result<${2}> {",
 			"\t\t$4",
 			"\t}",
-			"}\n"
+			"}\n",
 		],
-		"description": "impl TryFrom implementation (assume Result<T> in scope)"
+		"description": "impl TryFrom implementation (assume Result<T> in scope)",
 	},
-	
+
 	// -- Wrapper Snippets
 
 	"10x-wrap-option": {
 		"prefix": "10x-wrap-option",
-		"body": [
-			"Option<${1:$TM_SELECTED_TEXT}>"
-		],
-		"description": "Wrap Selection as Option<Selection>"
+		"body": ["Option<${1:$TM_SELECTED_TEXT}>"],
+		"description": "Wrap Selection as Option<Selection>",
 	},
 
 	"10x-wrap-result": {
 		"prefix": "10x-wrap-result",
-		"body": [
-			"Result<${1:$TM_SELECTED_TEXT}>"
-		],
-		"description": "Wrap Selection as Result<Selection>"
+		"body": ["Result<${1:$TM_SELECTED_TEXT}>"],
+		"description": "Wrap Selection as Result<Selection>",
 	},
 
 	"10x-wrap-vec": {
 		"prefix": "10x-wrap-vec",
-		"body": [
-			"Vec<${1:$TM_SELECTED_TEXT}>"
-		],
-		"description": "Wrap Selection as Vec<Selection>"
+		"body": ["Vec<${1:$TM_SELECTED_TEXT}>"],
+		"description": "Wrap Selection as Vec<Selection>",
 	},
 
 	"10x-wrap-arc": {
 		"prefix": "10x-wrap-arc",
-		"body": [
-			"Arc<${1:$TM_SELECTED_TEXT}>"
-		],
-		"description": "Wrap Selection as Arc<Selection>"
-	},	
+		"body": ["Arc<${1:$TM_SELECTED_TEXT}>"],
+		"description": "Wrap Selection as Arc<Selection>",
+	},
 
 	"10x-arg-impl-into-string": {
 		"prefix": "10x-arg-impl-into-string",
-		"body": [
-			"impl Into<${1:String}>"
-		],
-		"description": "10x-arg-impl-into-string"
+		"body": ["impl Into<${1:String}>"],
+		"description": "10x-arg-impl-into-string",
 	},
-  
+
 	// -- Functions
 
 	"10x-fn": {
@@ -134,9 +118,9 @@
 			"fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
 			"\t${4}",
 			"\t${5:todo!()}",
-			"}"
+			"}",
 		],
-	},	
+	},
 
 	"10x-pub-fn": {
 		"prefix": "10x-fn-02-pub-fn",
@@ -144,9 +128,9 @@
 			"pub fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
 			"\t${4}",
 			"\t${5:todo!()}",
-			"}"
+			"}",
 		],
-	},		
+	},
 
 	"10x-async-fn": {
 		"prefix": "10x-fn-03-async-fn",
@@ -154,29 +138,29 @@
 			"async fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
 			"\t${4}",
 			"\t${5:todo!()}",
-			"}"
+			"}",
 		],
 	},
 
-	"10x-pub-async-fn":{
+	"10x-pub-async-fn": {
 		"prefix": "10x-fn-04-pub-async-fn",
 		"body": [
 			"pub async fn ${1:fn_name}(${2}) -> Result<${3:()}> {",
 			"\t${4}",
 			"\t${5:todo!()}",
-			"}"
+			"}",
 		],
 	},
 
 	// -- Error
 
 	"10x-error-early-dev-box-dyn": {
-		"prefix": "10x-error-early-dev-box-dyn", 
+		"prefix": "10x-error-early-dev-box-dyn",
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Error>;",
 			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
 		],
-		"description": "Early dev error.rs (Box<dyn ...Error> pattern)"
+		"description": "Early dev error.rs (Box<dyn ...Error> pattern)",
 	},
 
 	"10x-type-result-box-dyn-error": {
@@ -184,75 +168,60 @@
 		"body": [
 			"pub type Result<T> = core::result::Result<T, Box<dyn std::error::Error>>;",
 		],
-		"description": "Result... box dyn"
+		"description": "Result... box dyn",
 	},
 
 	"10x-result": {
 		"prefix": "10x-result",
-		"body": [
-			"Result<${1:()}>",
-		],
-		"description": "Result<()>"
+		"body": ["Result<${1:()}>"],
+		"description": "Result<()>",
 	},
 
 	"10x-result-box-dyn-error": {
 		"prefix": "10x-result-box-dyn-error",
-		"body": [
-			"Result<${1:()}, Box<dyn std::error::Error>>${2}",
-		],
-		"description": "Result<(), box dyn..>"
-	},	
-	
+		"body": ["Result<${1:()}, Box<dyn std::error::Error>>${2}"],
+		"description": "Result<(), box dyn..>",
+	},
+
 	"10x-error-re-export-self-error-result": {
-		"prefix": "10x-error-re-export-self-error-result", 
-		"body": [
-			"pub use error::{Error, Result};",
-		],
-		"description": "pub use of self Error/Result"
+		"prefix": "10x-error-re-export-self-error-result",
+		"body": ["pub use error::{Error, Result};"],
+		"description": "pub use of self Error/Result",
 	},
 
 	"10x-error-use-result-error": {
 		"prefix": "10x-error-use-result-error",
-		"body": [
-			"use crate::${1:Result};"
-		],
-		"description": "use crate::{..,Result};"
-	},	
+		"body": ["use crate::${1:Result};"],
+		"description": "use crate::{..,Result};",
+	},
 
 	"10x-error-variant-with-from": {
 		"prefix": "10x-error-variant-with-from",
-		"body": [
-			"#[from]",
-			"${1:VariantName}(${2}${3:Error}),"
-		],
-		"description": "jc-error-variant"
+		"body": ["#[from]", "${1:VariantName}(${2}${3:Error}),"],
+		"description": "jc-error-variant",
 	},
 
 	"10x-box-dyn-error": {
 		"prefix": "10x-box-dyn-error",
-		"body": [
-			"Box<dyn std::error::Error>",
-		],
-		"description": "Box<dyn ..>"
+		"body": ["Box<dyn std::error::Error>"],
+		"description": "Box<dyn ..>",
 	},
 
 	// -- Debug
 
 	"10x-debug-println": {
 		"prefix": "10x-debug-println",
-		"body": [ "println!(\"->> $1{$2}$3\"$4);"],
-		"description": "println"
-	},	
-	
-	"10x-debug-tracing": {
-		"prefix": "10x-debug-tracing",
-		"body": [
-			"tracing::debug!(\"->> $1{$2}$3\"$4);"
-		],
-		"description": "tracing debug"
+		"body": ["println!(\"->> $1{$2}$3\"$4);"],
+		"description": "println",
 	},
 
-  // -- Test Snippets
+	"10x-debug-tracing": {
+		"prefix": "10x-debug-tracing",
+		"body": ["tracing::debug!(\"->> $1{$2}$3\"$4);"],
+		"description": "tracing debug",
+	},
+
+	// -- Test Snippets
 
 	"10x-test-module": {
 		"prefix": "10x-test-module-01",
@@ -268,9 +237,9 @@
 			"\t$1",
 			"}",
 			"",
-			"// endregion: --- Tests"
+			"// endregion: --- Tests",
 		],
-		"description": "Unit test sub module boilerplate"
+		"description": "Unit test sub module boilerplate",
 	},
 
 	"10x-test-module-with-anyhow": {
@@ -286,10 +255,10 @@
 			"\t$1",
 			"}",
 			"",
-			"// endregion: --- Tests"
+			"// endregion: --- Tests",
 		],
-		"description": "Unit test sub module boilerplate"
-	},	
+		"description": "Unit test sub module boilerplate",
+	},
 
 	"10x-test-fn-with-comment-scaffolding": {
 		"prefix": "10x-test-fn-01-with-comment-scaffolding",
@@ -303,10 +272,10 @@
 			"\t// -- Check",
 			"\t",
 			"\tOk(())",
-			"}"
+			"}",
 		],
-		"description": "Unit test function with comment scaffolding"
-	},	
+		"description": "Unit test function with comment scaffolding",
+	},
 
 	"10x-test-fn-simple": {
 		"prefix": "10x-test-fn-02-simple",
@@ -316,10 +285,10 @@
 			"\t${2}",
 			"",
 			"\tOk(())",
-			"}"
+			"}",
 		],
-		"description": "Unit test function with comment scaffolding"
-	},		
+		"description": "Unit test function with comment scaffolding",
+	},
 
 	"10x-test-async-fn-with-comment-scaffolding": {
 		"prefix": "10x-test-async-fn-01-with-comment-scaffolding",
@@ -333,10 +302,10 @@
 			"\t// -- Check",
 			"\t",
 			"\tOk(())",
-			"}"
+			"}",
 		],
-		"description": "Unit test function with comment scaffolding"
-	},	
+		"description": "Unit test function with comment scaffolding",
+	},
 
 	"10x-test-async-fn-simple": {
 		"prefix": "10x-test-async-fn-02-simple",
@@ -346,25 +315,20 @@
 			"\t${2}",
 			"\t",
 			"\tOk(())",
-			"}"
+			"}",
 		],
-		"description": "Unit test function with comment scaffolding"
+		"description": "Unit test function with comment scaffolding",
 	},
-
 
 	"10x-allow-module-inception": {
 		"prefix": "10x-allow-module-inception",
-		"body": [
-			"#${1}[allow(clippy::module_inception)]"
-		],
-		"description": "10x-allow-module-inception"
+		"body": ["#${1}[allow(clippy::module_inception)]"],
+		"description": "10x-allow-module-inception",
 	},
 
 	"10x-allow-unused": {
 		"prefix": "10x-allow-unused",
-		"body": [
-			"#${1}[allow(unused)]"
-		],
-		"description": "10x-allow-unused"
-	},	
+		"body": ["#${1}[allow(unused)]"],
+		"description": "10x-allow-unused",
+	},
 }

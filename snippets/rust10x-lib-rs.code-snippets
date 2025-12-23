@@ -9,7 +9,7 @@
 			"pub use error::{Error, Result};",
 			"",
 			"// endregion: --- Modules",
-			""
+			"",
 		],
 	},
 
@@ -21,10 +21,9 @@
 			"pub type Result<T> = core::result::Result<T, Error>;",
 			"pub type Error = Box<dyn std::error::Error>; // For early dev.",
 			"${1}",
-			"// endregion: --- Modules",			
+			"// endregion: --- Modules",
 			"${1}",
-			""
+			"",
 		],
-	}
-
+	},
 }

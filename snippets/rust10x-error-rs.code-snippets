@@ -19,9 +19,9 @@
 			"",
 			"impl std::error::Error for Error {}",
 			"",
-			"// endregion: --- Error Boilerplate"
+			"// endregion: --- Error Boilerplate",
 		],
-		"description": "Error boilerplate"
+		"description": "Error boilerplate",
 	},
 
 	"10x-error-rs-with-from": {
@@ -43,9 +43,9 @@
 			"",
 			"impl std::error::Error for Error {}",
 			"",
-			"// endregion: --- Error Boilerplate"
+			"// endregion: --- Error Boilerplate",
 		],
-		"description": "error.rs boostrap code with derive_more::From"
+		"description": "error.rs boostrap code with derive_more::From",
 	},
 
 	"10x-error-rs-with-custom": {
@@ -85,8 +85,8 @@
 			"impl std::error::Error for Error {}",
 			"",
 			"// endregion: --- Error Boilerplate",
-			""
+			"",
 		],
-		"description": "error.rs boostrap code with derive_more::From"
+		"description": "error.rs boostrap code with derive_more::From",
 	},
 }

@@ -1,5 +1,4 @@
 {
-
 	// -- Cargo Toml Full Template
 	"10x-cargo-toml-default": {
 		"prefix": "10x-cargo-toml-default",
@@ -15,17 +14,15 @@
 			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev.$2",
 			"",
 			"[dependencies]",
-			"$3"
+			"$3",
 		],
 	},
 
-  // -- Cargo Toml Snippets
+	// -- Cargo Toml Snippets
 
 	"10x-latest-rust-version": {
 		"prefix": "10x-latest-rust-version",
-		"body": [
-			"rust-version = \"1.78\""
-		],
+		"body": ["rust-version = \"1.92\""],
 	},
 
 	"10x-cargo-lints": {
@@ -33,7 +30,7 @@
 		"body": [
 			"[lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev."
+			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev.",
 		],
 	},
 
@@ -42,21 +39,21 @@
 		"body": [
 			"[workspace.lints.rust]",
 			"unsafe_code = \"forbid\"",
-			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev."
+			"# unused = { level = \"allow\", priority = -1 } # For exploratory dev.",
 		],
 	},
 
-  // -- Dependency Groups
+	// -- Dependency Groups
 
-  "10x-dep-group-async": {
+	"10x-dep-group-async": {
 		"prefix": "10x-dep-group-async",
 		"body": [
 			"# -- Async",
-			"tokio = { version = \"1\", features = [\"full\"] }"
+			"tokio = { version = \"1\", features = [\"full\"] }",
 		],
 	},
 
-  "10x-dep-group-serde-json": {
+	"10x-dep-group-serde-json": {
 		"prefix": "10x-dep-group-serde-json",
 		"body": [
 			"# -- Json",
@@ -70,53 +67,44 @@
 		"prefix": "10x-dep-group-others",
 		"body": [
 			"# -- Others",
-			"derive_more = {version = \"2\", features = [\"from\", \"display\"] }"
+			"derive_more = {version = \"2\", features = [\"from\", \"display\"] }",
 		],
 	},
 
-  // Note: This is for "simpler" CLI. Another group will be added for ratatui.
+	// Note: This is for "simpler" CLI. Another group will be added for ratatui.
 	"10x-dep-group-cli": {
 		"prefix": "10x-dep-group-cli",
 		"body": [
 			"# -- Cli",
-      "clap = {version = \"4\", features = [\"cargo\"]}",
+			"clap = {version = \"4\", features = [\"cargo\"]}",
 			"dialoguer = \"0.11\"",
 			"console = \"0.15\"",
-			"textwrap = \"0.16\""
+			"textwrap = \"0.16\"",
 		],
-	},  
+	},
 
 	"10x-dep-group-files": {
 		"prefix": "10x-dep-group-files-01",
-		"body": [
-			"# -- Files",
-			"walkdir = \"2\"",
-			"globset = \"0.4\""
-		],
+		"body": ["# -- Files", "walkdir = \"2\"", "globset = \"0.4\""],
 	},
 
 	"10x-dep-group-files-simple-fs": {
 		"prefix": "10x-dep-group-files-02-simple-fs",
 		"body": [
 			"# -- Files",
-			"simple-fs = { version = \"0.1\", features = [\"full\"] }"
+			"simple-fs = { version = \"0.1\", features = [\"full\"] }",
 		],
-	},	
+	},
 
-  // -- Dependency Individuals
+	// -- Dependency Individuals
 
 	"10x-dep-uuid": {
 		"prefix": "10x-dep-uuid",
-		"body": [
-			"uuid = {version = \"1\", features = [\"v4\",\"fast-rng\",]}"
-		],
-	},   
+		"body": ["uuid = {version = \"1\", features = [\"v4\",\"fast-rng\",]}"],
+	},
 
 	"10x-dep-futures-async": {
 		"prefix": "10x-dep-futures-async",
-		"body": [
-			"futures = \"0.3\""
-		],
-	},  	
-
+		"body": ["futures = \"0.3\""],
+	},
 }

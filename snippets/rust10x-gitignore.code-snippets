@@ -1,6 +1,5 @@
 {
-
-  "10x-gitignore-min": {
+	"10x-gitignore-min": {
 		"prefix": "10x-gitignore-01-min",
 		"body": [
 			"# -- Base",
@@ -10,7 +9,7 @@
 			"_*",
 			"# '_' in src dir, ok.",
 			"!**/src/**/_*",
-			"",			
+			"",
 			"*.lock",
 			"*.lockb",
 			"*.log",
@@ -25,7 +24,7 @@
 			".aipack",
 			"",
 		],
-		"description": "10x-gitignore minmum template"
+		"description": "10x-gitignore minmum template",
 	},
 
 	"10x-gitignore-more": {
@@ -37,7 +36,7 @@
 			"",
 			"_*",
 			"# '_' in src dir, ok.",
-			"!**/src/**/_*",			
+			"!**/src/**/_*",
 			"",
 			"*.lock",
 			"*.lockb",
@@ -76,7 +75,7 @@
 			"__pycache__/",
 			"*.py[cod]",
 			"*$py.class",
-			"",	
+			"",
 			"# -- Safety net",
 			"",
 			"tmp/",
@@ -116,9 +115,9 @@
 			"*.avi",
 			"",
 			"# Audio",
-      "*.mp3",
-      "*.wav",
-      "*.flac",
+			"*.mp3",
+			"*.wav",
+			"*.flac",
 			"",
 			"# Images",
 			"*.icns",
@@ -143,8 +142,8 @@
 			"",
 			"# Allow vscode",
 			"# !.vscode # Commented by default",
-			""
+			"",
 		],
-		"description": "10x-gitgnore full template"
-	},  
+		"description": "10x-gitgnore full template",
+	},
 }
